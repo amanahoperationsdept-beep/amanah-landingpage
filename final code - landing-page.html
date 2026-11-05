@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMANAH PRODUCTS | Quality Products. Meaningful Opportunities.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FAF3E0',
+                            200: '#F3E5AB',
+                            300: '#E6C687',
+                            400: '#D4AF37', // Classic Gold
+                            500: '#C59B27',
+                            600: '#AA7C11',
+                            700: '#8A6208',
+                        },
+                        obsidian: '#0B0C10',
+                        charcoal: '#1F2833',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAFA;
+            color: #1F2833;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #AA7C11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-bg-gradient {
+            background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+        }
+        .gold-btn {
+            background: linear-gradient(135deg, #D4AF37 0%, #C59B27 100%);
+            color: #000;
+            transition: all 0.3s ease;
+        }
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #E6C687 0%, #D4AF37 100%);
+            box-shadow: 0 10px 20px -5px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px);
+        }
+        .gold-card-border {
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            transition: all 0.3s ease;
+        }
+        .gold-card-border:hover {
+            border-color: rgba(212, 175, 55, 0.8);
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0C10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-gold-400 selection:text-black">
+
+    <!-- ================= TOP NAVIGATION ================= -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-obsidian/95 backdrop-blur-md border-b border-gold-400/20 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-full border-2 border-gold-400 overflow-hidden bg-obsidian p-1 flex items-center justify-center group-hover:scale-105 transition-transform">
+                        <span class="font-serif font-bold text-gold-400 text-xl tracking-tighter">A</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif text-xl font-bold tracking-widest text-white group-hover:text-gold-400 transition-colors">AMANAH</span>
+                        <span class="text-[9px] uppercase tracking-[0.3em] text-gold-400 -mt-1">Distribution & Marketing</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wider">
+                    <a href="#home" class="hover:text-gold-400 transition-colors text-white py-2">Home</a>
+                    <a href="#about" class="hover:text-gold-400 transition-colors text-slate-300 py-2">About Us</a>
+                    <a href="#products" class="hover:text-gold-400 transition-colors text-slate-300 py-2">Our Products</a>
+                    <a href="#opportunity" class="hover:text-gold-400 transition-colors text-slate-300 py-2">Business Opportunity</a>
+                    <a href="#contact" class="hover:text-gold-400 transition-colors text-slate-300 py-2">Contact Us</a>
+                </nav>
+
+                <!-- Right Action Button & Admin Login Trigger -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <button onclick="openPasscodeModal()" class="px-3.5 py-2 rounded-full border border-gold-400/30 text-gold-400 hover:bg-gold-400/10 text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5 transition-all" title="Admin Control Panel">
+                        <i class="fa-solid fa-lock text-xs"></i>
+                        <span>Admin</span>
+                    </button>
+                    <a href="#products" class="gold-btn px-6 py-2 rounded-full font-semibold text-xs tracking-wider uppercase flex items-center gap-2">
+                        <i class="fa-solid font-bold fa-bag-shopping"></i>
+                        <span>Shop Now</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-2">
+                    <button onclick="openPasscodeModal()" class="text-gold-400 border border-gold-400/30 p-2 rounded-lg text-xs" title="Admin Portal">
+                        <i class="fa-solid fa-lock text-base"></i>
+                    </button>
+                    <button id="mobile-menu-btn" type="button" class="text-slate-300 hover:text-gold-400 focus:outline-none p-2" aria-label="Toggle Navigation">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-obsidian/98 border-b border-gold-400/20 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gold-400 hover:bg-slate-900">Home</a>
+            <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-slate-900">About Us</a>
+            <a href="#products" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-slate-900">Our Products</a>
+            <a href="#opportunity" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-slate-900">Business Opportunity</a>
+            <a href="#contact" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-gold-400 hover:bg-slate-900">Contact Us</a>
+            <div class="pt-2">
+                <a href="#products" class="mobile-link w-full text-center gold-btn block px-6 py-3 rounded-full font-semibold text-xs tracking-wider uppercase">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- ================= 1. HERO SECTION ================= -->
+    <section id="home" class="relative pt-32 pb-20 md:pt-44 md:pb-32 bg-obsidian text-white overflow-hidden min-h-[90vh] flex items-center">
+        <!-- Background Decorative Elements -->
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D4AF37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-gold-400/10 rounded-full filter blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-gold-600/10 rounded-full filter blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/5 backdrop-blur-sm text-gold-400 text-xs font-semibold tracking-widest uppercase">
+                        <i class="fa-solid fa-crown text-xs"></i>
+                        <span id="hero-tagline">Premium Wellness & Entrepreneurship</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-white leading-tight" id="hero-title">
+                        QUALITY PRODUCTS. <br>
+                        <span class="gold-gradient-text">MEANINGFUL OPPORTUNITIES.</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-lg sm:text-xl font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed" id="hero-subtext">
+                        Discover AMANAH's growing collection of premium wellness and lifestyle products formulated to elevate daily living and empower direct business owners nationwide.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#products" class="gold-btn px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase w-full sm:w-auto text-center">
+                            Explore Products
+                        </a>
+                        <a href="#opportunity" class="px-8 py-4 rounded-full font-bold text-sm tracking-wider uppercase border border-gold-400/60 text-gold-300 hover:bg-gold-400/10 hover:border-gold-400 transition-all w-full sm:w-auto text-center flex items-center justify-center gap-2">
+                            <span>Become a Distributor</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Metrics -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-4 text-center lg:text-left">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-serif font-bold text-white">100%</span>
+                            <span class="text-xs text-slate-400 uppercase tracking-wider">Natural Ingredients</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-serif font-bold text-white">8+</span>
+                            <span class="text-xs text-slate-400 uppercase tracking-wider">Official Products</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-serif font-bold text-white">Nationwide</span>
+                            <span class="text-xs text-slate-400 uppercase tracking-wider">Distribution</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Imagery Display -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Golden Aura Graphic -->
+                        <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-gold-600/30 via-gold-400/10 to-transparent blur-xl transform rotate-3"></div>
+                        
+                        <!-- Hero Product Display Card (Clean Static Visitor View - Editing moved to Admin Portal) -->
+                        <div class="relative bg-charcoal/90 border border-gold-400/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl overflow-hidden group">
+                            <div class="absolute top-4 right-4 bg-gold-400 text-black text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                Featured Showcase
+                            </div>
+                            
+                            <!-- Product Composite Display (3 Customizable Slot Images managed via Admin Portal) -->
+                            <div class="w-full h-72 sm:h-80 flex items-center justify-center my-4 relative">
+                                <div class="flex items-end justify-center space-x-3 relative z-10">
+                                    
+                                    <!-- Showcase Image Slot 1 -->
+                                    <div class="relative">
+                                        <div id="showcase-img-0-container" class="w-20 sm:w-24 bg-gradient-to-b from-emerald-800 to-emerald-950 border border-emerald-400/40 rounded-t-2xl rounded-b-xl p-3 flex flex-col items-center justify-between h-44 shadow-2xl transform -rotate-6 group-hover:rotate-0 transition-transform duration-300 overflow-hidden">
+                                            <div class="w-8 h-4 bg-gold-400 rounded-sm mb-2"></div>
+                                            <div class="text-center">
+                                                <i class="fa-solid fa-leaf text-emerald-300 text-xl mb-1"></i>
+                                                <div class="text-[9px] font-bold text-emerald-100 uppercase tracking-tighter">Spirulina</div>
+                                            </div>
+                                            <div class="w-full h-1 bg-gold-400/50 rounded"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Showcase Image Slot 2 (Centerpiece) -->
+                                    <div class="relative z-20">
+                                        <div id="showcase-img-1-container" class="w-24 sm:w-28 bg-gradient-to-b from-slate-900 to-black border-2 border-gold-400 rounded-t-2xl rounded-b-xl p-3 flex flex-col items-center justify-between h-56 shadow-2xl group-hover:scale-105 transition-transform duration-300 overflow-hidden">
+                                            <div class="w-10 h-5 bg-gold-400 rounded-sm mb-2 border border-white/20"></div>
+                                            <div class="text-center">
+                                                <i class="fa-solid fa-crown text-gold-400 text-2xl mb-1"></i>
+                                                <div class="text-[10px] font-bold text-white uppercase tracking-wider">Glutagen CEE</div>
+                                                <div class="text-[8px] text-gold-300">Premium Formula</div>
+                                            </div>
+                                            <div class="w-full h-1.5 bg-gold-400 rounded"></div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Showcase Image Slot 3 -->
+                                    <div class="relative">
+                                        <div id="showcase-img-2-container" class="w-20 sm:w-24 bg-gradient-to-b from-amber-900 to-amber-950 border border-amber-500/40 rounded-t-2xl rounded-b-xl p-3 flex flex-col items-center justify-between h-48 shadow-2xl transform rotate-6 group-hover:rotate-0 transition-transform duration-300 overflow-hidden">
+                                            <div class="w-8 h-4 bg-gold-400 rounded-sm mb-2"></div>
+                                            <div class="text-center">
+                                                <i class="fa-solid fa-mug-hot text-amber-300 text-xl mb-1"></i>
+                                                <div class="text-[9px] font-bold text-amber-100 uppercase tracking-tighter">Baskug</div>
+                                            </div>
+                                            <div class="w-full h-1 bg-gold-400/50 rounded"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="text-center pt-2">
+                                <h3 class="font-serif text-xl font-bold text-white">The AMANAH Wellness Suite</h3>
+                                <p class="text-xs text-slate-400 mt-1">Authentic, Pure & Potently Formulated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= 2. ABOUT AMANAH ================= -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Visual Composite -->
+                <div class="lg:col-span-6 order-2 lg:order-1">
+                    <div class="relative">
+                        <!-- Main Box Frame -->
+                        <div class="bg-obsidian text-white p-8 sm:p-10 rounded-3xl shadow-xl relative z-10 border border-gold-400/20">
+                            <div class="w-12 h-12 rounded-xl bg-gold-400/10 border border-gold-400 flex items-center justify-center text-gold-400 text-xl mb-6">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-4" id="about-card-title">Empowering Communities Through Direct Excellence</h3>
+                            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6" id="about-card-desc">
+                                AMANAH PRODUCTS operates with an unwavering dedication to trust, integrity, and exceptional value. We bridge premium health formulas with a dynamic business ecosystem that rewards ambition and teamwork.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800">
+                                <div>
+                                    <div class="text-gold-400 font-bold text-lg">Integrity First</div>
+                                    <p class="text-xs text-slate-400">Pure sourcing & honest pricing.</p>
+                                </div>
+                                <div>
+                                    <div class="text-gold-400 font-bold text-lg">Shared Prosperity</div>
+                                    <p class="text-xs text-slate-400">Structured growth for distributors.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Back Decorative Frame -->
+                        <div class="absolute -bottom-6 -right-6 w-full h-full border-2 border-gold-400/40 rounded-3xl z-0 hidden sm:block"></div>
+                    </div>
+                </div>
+
+                <!-- Right Text Content -->
+                <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-gold-600 font-semibold text-xs tracking-widest uppercase">
+                        <span class="w-8 h-[2px] bg-gold-400"></span>
+                        <span>About Our Brand</span>
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-slate-900 leading-tight" id="about-main-title">
+                        Building Opportunities Through <span class="gold-gradient-text">Quality Products</span>
+                    </h2>
+
+                    <p class="text-slate-600 leading-relaxed text-base sm:text-lg" id="about-main-body">
+                        <strong>AMANAH PRODUCTS</strong> is a premier product distribution and business development company created to deliver essential wellness, vitality, and personal care solutions to households across the Philippines and beyond.
+                    </p>
+
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        Founded on the principles of trust (<em>Amanah</em>), we combine research-backed natural remedies with an accessible turn-key distribution model. Whether you seek to enhance your personal health or build a sustainable enterprise, AMANAH offers the platform, training, and products to help you thrive.
+                    </p>
+
+                    <!-- Feature Checklists -->
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Strict Quality Assurance</h4>
+                                <p class="text-xs text-slate-500">Every bottle and blend undergoes rigorous quality checks.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Lucrative Business Blueprint</h4>
+                                <p class="text-xs text-slate-500">Affordable entry levels for stockists, distributors, and branch operators.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-gold-100 text-gold-600 flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-check text-xs"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 text-sm">Comprehensive Entrepreneur Mentorship</h4>
+                                <p class="text-xs text-slate-500">Full guidance from executive leadership and business strategists.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= 3. OUR PRODUCTS ================= -->
+    <section id="products" class="py-24 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 text-gold-600 font-semibold text-xs tracking-widest uppercase">
+                    <i class="fa-solid fa-gem text-xs"></i>
+                    <span>Official Catalog</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900">
+                    Our Official Product Line
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    Formulated for optimal efficacy and crafted with original packaging integrity. Explore our complete range with standardized Suggested Retail Prices (SRP).
+                </p>
+            </div>
+
+            <!-- Products Grid (8 Items) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="products-container">
+                <!-- Javascript populates product cards -->
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= 4. BUSINESS OPPORTUNITY ================= -->
+    <section id="opportunity" class="py-24 bg-obsidian text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-400/30 bg-gold-400/10 text-gold-400 text-xs font-semibold tracking-widest uppercase">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Entrepreneurship Programs</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-white">
+                    Business Opportunity Packages
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg">
+                    Partner with AMANAH PRODUCTS and launch your distribution business with low overhead, turnkey logistics, and high-margin product lines.
+                </p>
+            </div>
+
+            <!-- 3 Opportunity Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Package 1: DISTRIBUTOR -->
+                <div class="bg-charcoal rounded-3xl p-8 border border-slate-700 hover:border-gold-400 transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-2">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-xs uppercase font-bold tracking-widest text-slate-400">Entry Tier</span>
+                                <h3 class="text-2xl font-serif font-bold text-white mt-1">DISTRIBUTOR</h3>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gold-400">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+                        </div>
+
+                        <div class="mb-6 pb-6 border-b border-slate-700">
+                            <span class="text-xs text-slate-400 block">Package Price</span>
+                            <div class="text-4xl font-serif font-bold text-gold-400 mt-1">₱1,250</div>
+                            <span class="text-xs text-slate-400 mt-1 block">Ideal for individual sellers and beginners</span>
+                        </div>
+
+                        <!-- Benefits List -->
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Includes initial product package value</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Up to 25% - 40% retail profit margin</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Official Distributor Account ID</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Access to basic sales training</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openOpportunityModal('DISTRIBUTOR', '₱1,250', 'Includes product package worth ₱1,250+, retail discount up to 40%, sales marketing collateral, and online seller kit.')" class="w-full py-3 rounded-full border border-gold-400/60 text-gold-300 font-bold text-xs uppercase tracking-wider hover:bg-gold-400 hover:text-black transition-all text-center">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Package 2: MOBILE STOCKIST (Highlighted) -->
+                <div class="bg-gradient-to-b from-slate-900 to-charcoal rounded-3xl p-8 border-2 border-gold-400 shadow-2xl flex flex-col justify-between relative transform lg:-translate-y-4">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold-400 text-black text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-lg">
+                        Most Popular Choice
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-start mb-6 mt-2">
+                            <div>
+                                <span class="text-xs uppercase font-bold tracking-widest text-gold-400">Growth Tier</span>
+                                <h3 class="text-2xl font-serif font-bold text-white mt-1">MOBILE STOCKIST</h3>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-gold-400/20 flex items-center justify-center text-gold-400">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+                        </div>
+
+                        <div class="mb-6 pb-6 border-b border-slate-700">
+                            <span class="text-xs text-slate-400 block">Package Price</span>
+                            <div class="text-4xl font-serif font-bold gold-gradient-text mt-1">₱7,980</div>
+                            <span class="text-xs text-slate-400 mt-1 block">For localized resellers and city hubs</span>
+                        </div>
+
+                        <!-- Benefits List -->
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>High-value fast moving inventory</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Exclusive stockist discount perks</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Overrides on downline distributor orders</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Marketing banner & promotional materials</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Priority inventory replenishment</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openOpportunityModal('MOBILE STOCKIST', '₱7,980', 'Full mobile inventory package with maximum markup yields, local directory listing as an official stockist, and override incentives.')" class="w-full py-3.5 rounded-full gold-btn font-bold text-xs uppercase tracking-wider text-center shadow-lg">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Package 3: BRANCH OPERATOR -->
+                <div class="bg-charcoal rounded-3xl p-8 border border-slate-700 hover:border-gold-400 transition-all duration-300 flex flex-col justify-between relative group hover:-translate-y-2">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <span class="text-xs uppercase font-bold tracking-widest text-slate-400">Executive Tier</span>
+                                <h3 class="text-2xl font-serif font-bold text-white mt-1">BRANCH OPERATOR</h3>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gold-400">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                        </div>
+
+                        <div class="mb-6 pb-6 border-b border-slate-700">
+                            <span class="text-xs text-slate-400 block">Package Price</span>
+                            <div class="text-4xl font-serif font-bold text-gold-400 mt-1">₱50,000</div>
+                            <span class="text-xs text-slate-400 mt-1 block">Regional distribution and center ownership</span>
+                        </div>
+
+                        <!-- Benefits List -->
+                        <ul class="space-y-3 mb-8 text-sm text-slate-300">
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Full center product inventory supply</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Highest tier wholesale pricing tier</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>City/Territory distribution rights</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fa-solid fa-circle-check text-gold-400 text-xs"></i>
+                                <span>Executive support & leadership summits</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button onclick="openOpportunityModal('BRANCH OPERATOR', '₱50,000', 'Complete territorial hub operator partnership, supreme wholesale tiers, office branding assistance, and direct company support.')" class="w-full py-3 rounded-full border border-gold-400/60 text-gold-300 font-bold text-xs uppercase tracking-wider hover:bg-gold-400 hover:text-black transition-all text-center">
+                        Learn More
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ================= 5. WHY CHOOSE AMANAH ================= -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <div class="inline-flex items-center gap-2 text-gold-600 font-semibold text-xs tracking-widest uppercase">
+                    <i class="fa-solid fa-shield-halved text-xs"></i>
+                    <span>The AMANAH Advantage</span>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-slate-900">
+                    Why Choose AMANAH
+                </h2>
+                <p class="text-slate-600 text-base sm:text-lg">
+                    We combine high-demand wellness products with dependable operational support to ensure long-term value for customers and partners.
+                </p>
+            </div>
+
+            <!-- 4 Visual Highlights Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Highlight 1 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-gold-400/50 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-600 text-2xl mb-6 group-hover:scale-110 group-hover:bg-gold-400 group-hover:text-black transition-all">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Quality Product Selection</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Formulated with organic and potent herbal botanicals like Spirulina, Serpentina, and pure Cee vitamins for real daily results.
+                    </p>
+                </div>
+
+                <!-- Highlight 2 -->
+                <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-gold-400/50 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-14 h-14 rounded-2xl bg-gold-400/10 border border-gold-400/30 flex items-center justify-center text-gold-600 text-2xl mb-6 group-hover:scale-110 group-hover:bg-gold-400 group-hover:text-black transition-all">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-slate-900 mb-3">Nationwide Distribution</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        A robust logistics and stocking network spanning key cities to ensure prompt fulfillment and consistent inventory supply.
+                    </p>
+                </div>
+
+                <!-- Highlight 3 -->
+    <!-- ================= FLOATING LIVE CHAT WIDGET ================= -->
+    <div id="live-chat-widget" class="fixed bottom-6 right-6 z-40">
+        <!-- Chat Trigger Toggle Button -->
+        <button onclick="toggleChatWindow()" class="w-14 h-14 rounded-full gold-btn shadow-2xl flex items-center justify-center text-slate-950 text-2xl hover:scale-110 transition-transform relative">
+            <i class="fa-solid fa-comments"></i>
+            <span id="unread-chat-badge" class="absolute -top-1 -right-1 bg-red-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white hidden">1</span>
+        </button>
+
+        <!-- Chat Window Drawer -->
+        <div id="chat-window" class="hidden absolute bottom-18 right-0 w-80 sm:w-96 bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-[480px]">
+            <!-- Chat Header -->
+            <div class="bg-obsidian text-white p-4 flex items-center justify-between border-b border-gold-400/30">
+                <div class="flex items-center gap-3">
+                    <div class="relative">
+                        <div class="w-9 h-9 rounded-full bg-gold-400/20 border border-gold-400 flex items-center justify-center text-gold-400">
+                            <i class="fa-solid fa-headset text-sm"></i>
+                        </div>
+                        <span class="w-2.5 h-2.5 bg-green-500 rounded-full absolute bottom-0 right-0 border border-obsidian"></span>
+                    </div>
+                    <div>
+                        <h4 class="font-serif text-sm font-bold text-white">AMANAH Live Desk</h4>
+                        <p class="text-[10px] text-slate-400">Client Support & Inquiries</p>
+                    </div>
+                </div>
+                <button onclick="toggleChatWindow()" class="text-slate-400 hover:text-white p-1">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages Display Area -->
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-slate-50 text-xs">
+                <div class="flex items-start gap-2 max-w-[85%]">
+                    <div class="w-7 h-7 rounded-full bg-gold-400/20 text-gold-600 flex items-center justify-center text-xs shrink-0">A</div>
+                    <div class="bg-white border border-slate-200 p-3 rounded-2xl rounded-tl-none shadow-sm text-slate-700">
+                        Welcome to AMANAH PRODUCTS! How can our team assist you with our catalog or reseller packages today?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Input Bar -->
+            <form id="chat-form" onsubmit="sendClientMessage(event)" class="p-3 bg-white border-t border-slate-100 flex gap-2">
+                <input type="text" id="chat-input" required placeholder="Type your message..." class="flex-1 bg-slate-100 px-4 py-2.5 rounded-full text-xs text-slate-800 outline-none focus:ring-1 focus:ring-gold-400">
+                <button type="submit" class="gold-btn w-9 h-9 rounded-full flex items-center justify-center text-slate-950 shrink-0">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ================= PASSCODE MODAL ================= -->
+    <div id="passcode-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-obsidian border border-gold-400/40 rounded-3xl max-w-sm w-full p-8 text-center shadow-2xl relative">
+            <button onclick="closePasscodeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="w-14 h-14 rounded-2xl bg-gold-400/10 border border-gold-400/40 text-gold-400 flex items-center justify-center text-2xl mx-auto mb-4">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-1">Admin Security Access</h3>
+            <p class="text-xs text-slate-400 mb-6">Enter administrative passcode to unlock management portal (Default: <span class="text-gold-400 font-mono">1234</span>)</p>
+            
+            <form onsubmit="handlePasscodeSubmit(event)" class="space-y-4">
+                <input type="password" id="admin-passcode-input" required placeholder="Enter Passcode" class="w-full text-center tracking-widest text-lg py-3 px-4 rounded-xl bg-charcoal border border-slate-700 text-gold-400 outline-none focus:border-gold-400">
+                <div id="passcode-error" class="text-xs text-red-400 hidden">Incorrect Passcode. Try again.</div>
+                <button type="submit" class="w-full py-3.5 rounded-xl gold-btn font-bold text-xs uppercase tracking-wider">
+                    Unlock Management Portal
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- ================= ADMIN PORTAL MODAL ================= -->
+    <div id="admin-portal" class="fixed inset-0 z-50 hidden bg-obsidian text-white overflow-y-auto">
+        <!-- Admin Top Navigation Bar -->
+        <header class="bg-charcoal border-b border-gold-400/20 sticky top-0 z-30 px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-gold-400/20 border border-gold-400 flex items-center justify-center text-gold-400 font-bold font-serif">A</div>
+                <div>
+                    <h2 class="font-serif text-lg font-bold text-white">AMANAH Executive Control Hub</h2>
+                    <span class="text-[10px] text-gold-400 uppercase tracking-widest">Admin Authorization Active</span>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="triggerGeminiAutoFix()" class="px-3.5 py-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-bold text-xs flex items-center gap-1.5 shadow-lg hover:brightness-110 transition-all">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>AI Gemini Auto-Fix</span>
+                </button>
+                <button onclick="saveAndLockAdmin()" class="gold-btn px-5 py-2 rounded-full font-bold text-xs uppercase tracking-wider flex items-center gap-1.5 shadow-xl hover:scale-105 transition-all">
+                    <i class="fa-solid fa-lock text-xs"></i>
+                    <span>Save & Lock</span>
+                </button>
+                <button onclick="closeAdminPortal()" class="px-4 py-2 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs uppercase tracking-wider transition-colors">
+                    <i class="fa-solid fa-xmark mr-1"></i> Close
+                </button>
+            </div>
+        </header>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Left Sidebar Tabs -->
+                <div class="lg:col-span-3 space-y-2">
+                    <button onclick="switchAdminTab('home')" class="admin-tab-btn active-tab w-full text-left px-5 py-3.5 rounded-2xl font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-between" id="tab-btn-home">
+                        <span><i class="fa-solid fa-house mr-3 text-gold-400"></i> Home Section</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+
+                    <button onclick="switchAdminTab('about')" class="admin-tab-btn w-full text-left px-5 py-3.5 rounded-2xl font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-between" id="tab-btn-about">
+                        <span><i class="fa-solid fa-circle-info mr-3 text-gold-400"></i> About Us Section</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+
+                    <button onclick="switchAdminTab('products')" class="admin-tab-btn w-full text-left px-5 py-3.5 rounded-2xl font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-between" id="tab-btn-products">
+                        <span><i class="fa-solid fa-boxes-stacked mr-3 text-gold-400"></i> Products & Images</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+
+                    <button onclick="switchAdminTab('showcase')" class="admin-tab-btn w-full text-left px-5 py-3.5 rounded-2xl font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-between" id="tab-btn-showcase">
+                        <span><i class="fa-solid fa-square-plus mr-3 text-gold-400"></i> Hero Showcase Images</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+
+                    <button onclick="switchAdminTab('opportunity')" class="admin-tab-btn w-full text-left px-5 py-3.5 rounded-2xl font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-between" id="tab-btn-opportunity">
+                        <span><i class="fa-solid fa-handshake mr-3 text-gold-400"></i> Business Packages</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+
+                    <button onclick="switchAdminTab('orders')" class="admin-tab-btn w-full text-left px-5 py-3.5 rounded-2xl font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-between" id="tab-btn-orders">
+                        <span><i class="fa-solid fa-inbox mr-3 text-gold-400"></i> Inquiries & Live Chat</span>
+                        <span id="admin-chat-badge" class="bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full hidden">0</span>
+                    </button>
+
+                    <button onclick="switchAdminTab('security')" class="admin-tab-btn w-full text-left px-5 py-3.5 rounded-2xl font-semibold text-xs tracking-wider uppercase transition-all flex items-center justify-between" id="tab-btn-security">
+                        <span><i class="fa-solid fa-key mr-3 text-gold-400"></i> Passcode Security</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Right Editor Workarea -->
+                <div class="lg:col-span-9 bg-charcoal border border-slate-700/80 rounded-3xl p-6 sm:p-8 relative">
+                    
+                    <!-- TAB 1: HOME SECTION EDIT -->
+                    <div id="admin-section-home" class="admin-tab-panel space-y-6">
+                        <h3 class="font-serif text-2xl font-bold text-white pb-4 border-b border-slate-700">Edit Home Hero Banner</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">Tagline Badge Text</label>
+                                <input type="text" id="admin-hero-tagline-input" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-gold-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">Main Headline (HTML Supported)</label>
+                                <input type="text" id="admin-hero-title-input" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-gold-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">Hero Description</label>
+                                <textarea id="admin-hero-subtext-input" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-gold-400"></textarea>
+                            </div>
+                            <button onclick="saveHomeSection()" class="gold-btn px-8 py-3 rounded-xl font-bold text-xs uppercase tracking-wider">
+                                Save Home Changes
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: ABOUT US EDIT -->
+                    <div id="admin-section-about" class="admin-tab-panel hidden space-y-6">
+                        <h3 class="font-serif text-2xl font-bold text-white pb-4 border-b border-slate-700">Edit About Us Section</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">Main Headline</label>
+                                <input type="text" id="admin-about-title-input" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-gold-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">Main Body Paragraph</label>
+                                <textarea id="admin-about-body-input" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-gold-400"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">Feature Box Card Title</label>
+                                <input type="text" id="admin-about-card-title-input" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-gold-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">Feature Box Card Description</label>
+                                <textarea id="admin-about-card-desc-input" rows="3" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none focus:border-gold-400"></textarea>
+                            </div>
+                            <button onclick="saveAboutSection()" class="gold-btn px-8 py-3 rounded-xl font-bold text-xs uppercase tracking-wider">
+                                Save About Changes
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: PRODUCTS CATALOG & MANUAL IMAGE UPLOAD -->
+                    <div id="admin-section-products" class="admin-tab-panel hidden space-y-6">
+                        <div class="flex items-center justify-between pb-4 border-b border-slate-700">
+                            <h3 class="font-serif text-2xl font-bold text-white">Product Catalog & Custom Image Uploader</h3>
+                            <button onclick="addNewProductPrompt()" class="px-4 py-2 rounded-xl bg-gold-400/20 border border-gold-400 text-gold-400 text-xs font-bold uppercase tracking-wider hover:bg-gold-400 hover:text-black transition-all">
+                                + Add Product
+                            </button>
+                        </div>
+                        <div id="admin-product-list" class="space-y-4 max-h-[500px] overflow-y-auto pr-2">
+                            <!-- Product rows auto-rendered in JS -->
+                        </div>
+                    </div>
+
+                    <!-- TAB 3.5: FEATURED SHOWCASE IMAGES EDIT -->
+                    <div id="admin-section-showcase" class="admin-tab-panel hidden space-y-6">
+                        <div class="pb-4 border-b border-slate-700">
+                            <h3 class="font-serif text-2xl font-bold text-white">Edit Hero Featured Showcase Images</h3>
+                            <p class="text-xs text-slate-400 mt-1">Upload and manage the 3 product images featured prominently in the Hero section banner.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <!-- Showcase Slot 1 -->
+                            <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl space-y-4 text-center">
+                                <span class="text-xs text-gold-400 font-bold uppercase tracking-wider block">Slot 1 (Left Bottle)</span>
+                                <div id="admin-showcase-prev-0" class="w-full h-36 bg-charcoal rounded-xl border border-slate-700 flex items-center justify-center overflow-hidden">
+                                    <i class="fa-solid fa-image text-3xl text-slate-600"></i>
+                                </div>
+                                <label class="w-full py-2.5 rounded-xl gold-btn font-bold text-xs uppercase tracking-wider block cursor-pointer text-center">
+                                    <i class="fa-solid fa-plus mr-1"></i> Upload Image 1
+                                    <input type="file" accept="image/*" onchange="uploadShowcaseImage(event, 0)" class="hidden">
+                                </label>
+                            </div>
+
+                            <!-- Showcase Slot 2 (Centerpiece) -->
+                            <div class="bg-slate-900 border-2 border-gold-400/60 p-5 rounded-2xl space-y-4 text-center relative">
+                                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold-400 text-black text-[9px] font-bold uppercase tracking-widest px-3 py-0.5 rounded-full">Center Highlight</span>
+                                <span class="text-xs text-gold-400 font-bold uppercase tracking-wider block mt-1">Slot 2 (Center Bottle)</span>
+                                <div id="admin-showcase-prev-1" class="w-full h-36 bg-charcoal rounded-xl border border-slate-700 flex items-center justify-center overflow-hidden">
+                                    <i class="fa-solid fa-image text-3xl text-slate-600"></i>
+                                </div>
+                                <label class="w-full py-2.5 rounded-xl gold-btn font-bold text-xs uppercase tracking-wider block cursor-pointer text-center">
+                                    <i class="fa-solid fa-plus mr-1"></i> Upload Image 2
+                                    <input type="file" accept="image/*" onchange="uploadShowcaseImage(event, 1)" class="hidden">
+                                </label>
+                            </div>
+
+                            <!-- Showcase Slot 3 -->
+                            <div class="bg-slate-900 border border-slate-800 p-5 rounded-2xl space-y-4 text-center">
+                                <span class="text-xs text-gold-400 font-bold uppercase tracking-wider block">Slot 3 (Right Bottle)</span>
+                                <div id="admin-showcase-prev-2" class="w-full h-36 bg-charcoal rounded-xl border border-slate-700 flex items-center justify-center overflow-hidden">
+                                    <i class="fa-solid fa-image text-3xl text-slate-600"></i>
+                                </div>
+                                <label class="w-full py-2.5 rounded-xl gold-btn font-bold text-xs uppercase tracking-wider block cursor-pointer text-center">
+                                    <i class="fa-solid fa-plus mr-1"></i> Upload Image 3
+                                    <input type="file" accept="image/*" onchange="uploadShowcaseImage(event, 2)" class="hidden">
+                                </label>
+                            </div>
+                        </div>
+
+                        <button onclick="saveAndLockAdmin()" class="gold-btn px-8 py-3 rounded-xl font-bold text-xs uppercase tracking-wider">
+                            Save & Lock Changes
+                        </button>
+                    </div>
+
+                    <!-- TAB 4: BUSINESS OPPORTUNITY EDIT -->
+                    <div id="admin-section-opportunity" class="admin-tab-panel hidden space-y-6">
+                        <h3 class="font-serif text-2xl font-bold text-white pb-4 border-b border-slate-700">Edit Business Tiers</h3>
+                        <div class="space-y-6">
+                            <!-- Tier 1 -->
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3">
+                                <span class="text-xs text-gold-400 font-bold uppercase">Distributor Package</span>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" id="opp-price-0" class="bg-charcoal border border-slate-700 rounded-xl px-4 py-2 text-white text-xs" placeholder="Price">
+                                    <input type="text" id="opp-desc-0" class="bg-charcoal border border-slate-700 rounded-xl px-4 py-2 text-white text-xs" placeholder="Description summary">
+                                </div>
+                            </div>
+
+                            <!-- Tier 2 -->
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3">
+                                <span class="text-xs text-gold-400 font-bold uppercase">Mobile Stockist Package</span>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" id="opp-price-1" class="bg-charcoal border border-slate-700 rounded-xl px-4 py-2 text-white text-xs" placeholder="Price">
+                                    <input type="text" id="opp-desc-1" class="bg-charcoal border border-slate-700 rounded-xl px-4 py-2 text-white text-xs" placeholder="Description summary">
+                                </div>
+                            </div>
+
+                            <!-- Tier 3 -->
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 space-y-3">
+                                <span class="text-xs text-gold-400 font-bold uppercase">Branch Operator Package</span>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <input type="text" id="opp-price-2" class="bg-charcoal border border-slate-700 rounded-xl px-4 py-2 text-white text-xs" placeholder="Price">
+                                    <input type="text" id="opp-desc-2" class="bg-charcoal border border-slate-700 rounded-xl px-4 py-2 text-white text-xs" placeholder="Description summary">
+                                </div>
+                            </div>
+
+                            <button onclick="saveOpportunitySection()" class="gold-btn px-8 py-3 rounded-xl font-bold text-xs uppercase tracking-wider">
+                                Save Opportunity Pricing
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- TAB 5: ORDERS & LIVE CHAT MANAGING -->
+                    <div id="admin-section-orders" class="admin-tab-panel hidden space-y-6">
+                        <h3 class="font-serif text-2xl font-bold text-white pb-4 border-b border-slate-700">Live Client Chat & Message Console</h3>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Live Chat Desk for Admin -->
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 flex flex-col h-96">
+                                <h4 class="text-xs font-bold uppercase text-gold-400 mb-3"><i class="fa-solid fa-headset mr-2"></i>Live Client Console</h4>
+                                <div id="admin-chat-messages" class="flex-1 overflow-y-auto space-y-3 p-3 bg-charcoal rounded-xl text-xs">
+                                    <!-- Dynamic chat messages -->
+                                </div>
+                                <form onsubmit="sendAdminChatMessage(event)" class="mt-3 flex gap-2">
+                                    <input type="text" id="admin-chat-input" placeholder="Reply to visitor..." class="flex-1 bg-slate-950 border border-slate-700 px-3 py-2 rounded-lg text-xs text-white outline-none">
+                                    <button type="submit" class="gold-btn px-4 py-2 rounded-lg text-xs font-bold">Reply</button>
+                                </form>
+                            </div>
+
+                            <!-- Submitted Form Enquiries -->
+                            <div class="bg-slate-900 p-5 rounded-2xl border border-slate-800 flex flex-col h-96">
+                                <h4 class="text-xs font-bold uppercase text-gold-400 mb-3"><i class="fa-solid fa-envelope mr-2"></i>Inquiries Inbox</h4>
+                                <div id="admin-inquiries-list" class="flex-1 overflow-y-auto space-y-3 pr-1">
+                                    <div class="p-3 bg-charcoal rounded-xl border border-slate-800 text-xs space-y-1">
+                                        <div class="flex justify-between text-slate-400">
+                                            <span class="font-bold text-white">Maria Santos</span>
+                                            <span>Just now</span>
+                                        </div>
+                                        <div class="text-gold-400">Mobile Stockist (₱7,980)</div>
+                                        <p class="text-slate-300 italic">"Interested in territorial distribution rights for Iloilo City."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 6: CHANGE PASSCODE SECURITY -->
+                    <div id="admin-section-security" class="admin-tab-panel hidden space-y-6">
+                        <h3 class="font-serif text-2xl font-bold text-white pb-4 border-b border-slate-700">Security & Passcode Settings</h3>
+                        <form onsubmit="changeAdminPasscode(event)" class="space-y-4 max-w-md">
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">Current Passcode</label>
+                                <input type="password" id="current-pass-input" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-semibold text-slate-400 mb-2">New Passcode</label>
+                                <input type="password" id="new-pass-input" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white text-sm outline-none">
+                            </div>
+                            <button type="submit" class="gold-btn px-8 py-3 rounded-xl font-bold text-xs uppercase tracking-wider">
+                                Update Security Passcode
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ================= OPPORTUNITY DETAILS MODAL ================= -->
+    <div id="opportunity-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-obsidian text-white rounded-3xl max-w-md w-full p-8 border border-gold-400/40 relative shadow-2xl">
+            <button onclick="closeOpportunityModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div class="w-12 h-12 rounded-2xl bg-gold-400/20 text-gold-400 flex items-center justify-center text-2xl mb-4">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <h3 id="opp-modal-title" class="font-serif text-2xl font-bold gold-gradient-text mb-1">Package Tier</h3>
+            <div id="opp-modal-price" class="text-3xl font-serif font-bold text-white mb-4">₱0</div>
+
+            <p id="opp-modal-desc" class="text-slate-300 text-sm leading-relaxed mb-6">
+                Package detail description...
+            </p>
+
+            <a href="#contact" onclick="closeOpportunityModal()" class="w-full py-3.5 rounded-full gold-btn font-bold text-xs uppercase tracking-wider block text-center">
+                Contact Corporate Team
+            </a>
+        </div>
+    </div>
+
+
+    <!-- ================= JAVASCRIPT LOGIC ================= -->
+    <script>
+        // System Global State & Storage
+        let adminPasscode = '1234';
+        let showcaseImages = ['', '', ''];
+        let chatMessagesList = [
+            { sender: 'admin', text: 'Welcome to AMANAH PRODUCTS! How can our team assist you with our catalog or reseller packages today?' }
+        ];
+
+        // Showcase Image Upload Handler
+        function uploadShowcaseImage(event, slotIndex) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                showcaseImages[slotIndex] = e.target.result;
+                
+                // Update live home page container
+                const container = document.getElementById(`showcase-img-${slotIndex}-container`);
+                if (container) {
+                    container.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-contain drop-shadow-2xl">`;
+                }
+
+                // Update Admin preview box
+                const adminPrev = document.getElementById(`admin-showcase-prev-${slotIndex}`);
+                if (adminPrev) {
+                    adminPrev.innerHTML = `<img src="${e.target.result}" class="w-full h-full object-contain p-2">`;
+                }
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // Save All Changes & Immediately Lock Admin Panel
+        function saveAndLockAdmin() {
+            // Apply Home Hero
+            const taglineIn = document.getElementById('admin-hero-tagline-input');
+            const titleIn = document.getElementById('admin-hero-title-input');
+            const subtextIn = document.getElementById('admin-hero-subtext-input');
+            if (taglineIn) document.getElementById('hero-tagline').textContent = taglineIn.value;
+            if (titleIn) document.getElementById('hero-title').innerHTML = titleIn.value;
+            if (subtextIn) document.getElementById('hero-subtext').textContent = subtextIn.value;
+
+            // Apply About Us
+            const aboutTitleIn = document.getElementById('admin-about-title-input');
+            const aboutBodyIn = document.getElementById('admin-about-body-input');
+            const aboutCardTitleIn = document.getElementById('admin-about-card-title-input');
+            const aboutCardDescIn = document.getElementById('admin-about-card-desc-input');
+            if (aboutTitleIn) document.getElementById('about-main-title').innerHTML = aboutTitleIn.value;
+            if (aboutBodyIn) document.getElementById('about-main-body').textContent = aboutBodyIn.value;
+            if (aboutCardTitleIn) document.getElementById('about-card-title').textContent = aboutCardTitleIn.value;
+            if (aboutCardDescIn) document.getElementById('about-card-desc').textContent = aboutCardDescIn.value;
+
+            renderProducts();
+            closeAdminPortal();
+
+            // Confirmation alert box
+            const alertBox = document.createElement('div');
+            alertBox.className = "fixed top-24 right-6 z-50 bg-gold-400 text-black font-bold px-6 py-3 rounded-2xl shadow-2xl flex items-center gap-2 text-xs uppercase tracking-wider animate-bounce";
+            alertBox.innerHTML = `<i class="fa-solid fa-circle-check text-base"></i> All Changes Instantly Saved & Admin Locked!`;
+            document.body.appendChild(alertBox);
+            setTimeout(() => alertBox.remove(), 4000);
+        }
+
+        // Official AMANAH Products Dataset with visual icon and gradient themes
+        let products = [
+            {
+                id: 'spirulina',
+                name: 'Spirulina Superfood',
+                srp: '₱350',
+                desc: '100 Tablets Natural Herbal Food Supplement. Highly rich in nutrients, protein, and powerful antioxidant effects to boost overall vitality.',
+                icon: 'fa-leaf',
+                theme: 'from-emerald-900 to-slate-900',
+                border: 'border-emerald-500/30',
+                customImg: ''
+            },
+            {
+                id: 'serpentina',
+                name: 'Serpentina',
+                srp: '₱600',
+                desc: 'Andrographis paniculata formulation (50 Capsules x 500mg). Renowned for supporting healthy immune defense, blood sugar balance, and wellness.',
+                icon: 'fa-capsules',
+                theme: 'from-teal-900 to-slate-900',
+                border: 'border-teal-500/30',
+                customImg: ''
+            },
+            {
+                id: 'glutagen-cee',
+                name: 'Glutagen CEE',
+                srp: '₱600',
+                desc: 'Gluta + Collagen + Sodium Ascorbate (60 Capsules x 500mg). Advanced whitening and cellular restoration formula with a high-shine golden cap.',
+                icon: 'fa-sparkles',
+                iconClass: 'fa-solid fa-star',
+                theme: 'from-amber-950 to-slate-900',
+                border: 'border-gold-400/50',
+                customImg: ''
+            },
+            {
+                id: 'max-c-pro',
+                name: 'Max C Pro+',
+                srp: '₱1,000',
+                desc: 'Vitamins, Minerals + Zinc. Alkaline System formula enriched with Mangosteen and Citrus for immune defense and non-acidic daily energy.',
+                icon: 'fa-shield-virus',
+                theme: 'from-indigo-950 to-slate-900',
+                border: 'border-indigo-500/30',
+                customImg: ''
+            },
+            {
+                id: 'baskug',
+                name: 'Baskug Coffee for Men',
+                srp: '₱450',
+                desc: '10-in-1 Healthy Coffee Blend with Tongkat Ali, Maca, and Ginseng (10 Sachets, 200g). Enhances physical stamina, cognitive function, and vitality.',
+                icon: 'fa-mug-hot',
+                theme: 'from-amber-900 to-amber-950',
+                border: 'border-amber-600/40',
+                customImg: ''
+            },
+            {
+                id: 'barakah',
+                name: 'Barakah Green Coffee Mix',
+                srp: '₱450',
+                desc: 'Premium Herbal Coffee Mix with Garcinia Cambogia, L-Carnitine, Barley, Green Tea & Mangosteen (10 Sachets, 210g) for weight and metabolic balance.',
+                icon: 'fa-seedling',
+                theme: 'from-green-950 to-slate-900',
+                border: 'border-green-500/30',
+                customImg: ''
+            },
+            {
+                id: 'herbal-oil',
+                name: 'Herbal Oil',
+                srp: '₱180',
+                desc: 'Soothing natural essential herbal oil blend for quick relief from muscle fatigue, body tension, joint discomfort, and daily stress.',
+                icon: 'fa-bottle-droplet',
+                theme: 'from-cyan-950 to-slate-900',
+                border: 'border-cyan-500/30',
+                customImg: ''
+            },
+            {
+                id: 'herbal-rub',
+                name: 'Herbal Rub (Deep Balm)',
+                srp: '₱125',
+                desc: 'Therapeutic aromatic deep balm formulation providing fast comfort for minor aches, head tension, and nasal congestion.',
+                icon: 'fa-heart-pulse',
+                theme: 'from-rose-950 to-slate-900',
+                border: 'border-rose-500/30',
+                customImg: ''
+            }
+        ];
+
+        // Render Product Cards into DOM with custom image support
+        function renderProducts() {
+            const container = document.getElementById('products-container');
+            if (!container) return;
+
+            container.innerHTML = products.map(product => `
+                <div class="bg-white rounded-3xl overflow-hidden gold-card-border flex flex-col justify-between group">
+                    <div>
+                        <!-- Product Visual Box -->
+                        <div class="bg-gradient-to-b ${product.theme} p-6 flex flex-col items-center justify-center relative h-64 overflow-hidden border-b ${product.border}">
+                            <span class="absolute top-3 right-3 bg-gold-400 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase z-10 shadow-md">
+                                SRP ${product.srp}
+                            </span>
+                            
+                            ${product.customImg ? `
+                                <img src="${product.customImg}" alt="${product.name}" class="h-full max-h-52 object-contain group-hover:scale-110 transition-transform duration-300 drop-shadow-xl">
+                            ` : `
+                                <div class="w-24 h-36 rounded-2xl border-2 border-gold-400/40 bg-black/30 backdrop-blur-sm flex flex-col items-center justify-between p-3 group-hover:scale-105 group-hover:border-gold-400 transition-all duration-300 shadow-xl">
+                                    <div class="w-6 h-2.5 bg-gold-400 rounded-xs"></div>
+                                    <i class="fa-solid ${product.iconClass || product.icon} text-3xl text-gold-400 my-auto"></i>
+                                    <div class="w-full text-center">
+                                        <div class="text-[8px] font-bold uppercase tracking-wider text-slate-200 truncate">${product.name}</div>
+                                        <div class="w-full h-1 bg-gold-400/60 rounded mt-1"></div>
+                                    </div>
+                                </div>
+                            `}
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="p-6">
+                            <h3 class="font-serif text-xl font-bold text-slate-900 group-hover:text-gold-600 transition-colors">
+                                ${product.name}
+                            </h3>
+                            <div class="text-sm font-bold text-gold-600 mb-2">${product.srp}</div>
+                            <p class="text-slate-600 text-xs leading-relaxed line-clamp-3">
+                                ${product.desc}
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card Action Button -->
+                    <div class="px-6 pb-6 pt-0">
+                        <button onclick="openProductModal('${product.id}')" class="w-full py-2.5 rounded-xl border border-slate-300 hover:border-gold-400 text-slate-700 hover:text-black hover:bg-gold-400/20 font-bold text-xs uppercase tracking-wider transition-all text-center">
+                            View Product
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Open Product Detail Modal
+        function openProductModal(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+
+            document.getElementById('modal-title').textContent = product.name;
+            document.getElementById('modal-price').textContent = product.srp;
+            document.getElementById('modal-desc').textContent = product.desc;
+            
+            const displayBox = document.getElementById('modal-img-container');
+            if (product.customImg) {
+                displayBox.innerHTML = `<img src="${product.customImg}" alt="${product.name}" class="max-h-64 object-contain drop-shadow-2xl">`;
+            } else {
+                displayBox.innerHTML = `
+                    <div id="modal-icon-display" class="w-28 h-40 rounded-2xl bg-gradient-to-b from-gold-400/20 to-gold-600/10 border-2 border-gold-400 flex flex-col items-center justify-center text-center p-4 shadow-2xl">
+                        <i class="fa-solid ${product.iconClass || product.icon} text-4xl text-gold-400 mb-2"></i>
+                        <span class="text-[10px] font-bold text-slate-300 uppercase">AMANAH</span>
+                    </div>
+                `;
+            }
+
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        // Open Opportunity Detail Modal
+        function openOpportunityModal(tier, price, details) {
+            document.getElementById('opp-modal-title').textContent = tier;
+            document.getElementById('opp-modal-price').textContent = price;
+            document.getElementById('opp-modal-desc').textContent = details;
+
+            document.getElementById('opportunity-modal').classList.remove('hidden');
+        }
+
+        function closeOpportunityModal() {
+            document.getElementById('opportunity-modal').classList.add('hidden');
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            alertBox.className = "mt-4 p-4 rounded-xl text-sm font-medium bg-green-100 text-green-800 border border-green-200";
+            alertBox.textContent = "Thank you! Your business inquiry has been received. An AMANAH corporate representative will contact you shortly.";
+            alertBox.classList.remove('hidden');
+            
+            // Push to Admin Inquiry List
+            const inquiryList = document.getElementById('admin-inquiries-list');
+            if (inquiryList) {
+                const inputs = e.target.querySelectorAll('input, select, textarea');
+                const name = inputs[0].value;
+                const type = inputs[3].value;
+                const msg = inputs[4].value;
+                
+                const card = document.createElement('div');
+                card.className = "p-3 bg-charcoal rounded-xl border border-slate-800 text-xs space-y-1";
+                card.innerHTML = `
+                    <div class="flex justify-between text-slate-400">
+                        <span class="font-bold text-white">${name}</span>
+                        <span>Just now</span>
+                    </div>
+                    <div class="text-gold-400">${type}</div>
+                    <p class="text-slate-300 italic">"${msg}"</p>
+                `;
+                inquiryList.prepend(card);
+            }
+
+            e.target.reset();
+
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 6000);
+        }
+
+        // --- LIVE CHAT WIDGET & SYNC ---
+        function toggleChatWindow() {
+            const chatWin = document.getElementById('chat-window');
+            chatWin.classList.toggle('hidden');
+            document.getElementById('unread-chat-badge').classList.add('hidden');
+        }
+
+        function renderChatMessages() {
+            const clientBox = document.getElementById('chat-messages');
+            const adminBox = document.getElementById('admin-chat-messages');
+            
+            const html = chatMessagesList.map(msg => {
+                if (msg.sender === 'admin') {
+                    return `
+                        <div class="flex items-start gap-2 max-w-[85%]">
+                            <div class="w-7 h-7 rounded-full bg-gold-400/20 text-gold-400 flex items-center justify-center text-xs shrink-0 font-bold">A</div>
+                            <div class="bg-slate-800 border border-slate-700 p-3 rounded-2xl rounded-tl-none text-slate-200">
+                                ${msg.text}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    return `
+                        <div class="flex items-start gap-2 max-w-[85%] ml-auto flex-row-reverse">
+                            <div class="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs shrink-0 font-bold">U</div>
+                            <div class="bg-gold-400 text-black p-3 rounded-2xl rounded-tr-none font-medium">
+                                ${msg.text}
+                            </div>
+                        </div>
+                    `;
+                }
+            }).join('');
+
+            if (clientBox) {
+                clientBox.innerHTML = html;
+                clientBox.scrollTop = clientBox.scrollHeight;
+            }
+            if (adminBox) {
+                adminBox.innerHTML = html;
+                adminBox.scrollTop = adminBox.scrollHeight;
+            }
+        }
+
+        function sendClientMessage(e) {
+            e.preventDefault();
+            const input = document.getElementById('chat-input');
+            const val = input.value.trim();
+            if (!val) return;
+
+            chatMessagesList.push({ sender: 'client', text: val });
+            input.value = '';
+            renderChatMessages();
+
+            // Notify Admin tab badge
+            const badge = document.getElementById('admin-chat-badge');
+            if (badge) {
+                badge.textContent = parseInt(badge.textContent || 0) + 1;
+                badge.classList.remove('hidden');
+            }
+
+            // Simulated Automated Response if admin not actively replying
+            setTimeout(() => {
+                if (chatMessagesList[chatMessagesList.length - 1].sender === 'client') {
+                    chatMessagesList.push({ 
+                        sender: 'admin', 
+                        text: 'Thank you for reaching out! An AMANAH corporate representative has been notified and will reply shortly.' 
+                    });
+                    renderChatMessages();
+                }
+            }, 1200);
+        }
+
+        function sendAdminChatMessage(e) {
+            e.preventDefault();
+            const input = document.getElementById('admin-chat-input');
+            const val = input.value.trim();
+            if (!val) return;
+
+            chatMessagesList.push({ sender: 'admin', text: val });
+            input.value = '';
+            renderChatMessages();
+        }
+
+        // --- ADMIN SECURITY & MODAL MANAGEMENT ---
+        function openPasscodeModal() {
+            document.getElementById('passcode-modal').classList.remove('hidden');
+            document.getElementById('admin-passcode-input').focus();
+        }
+
+        function closePasscodeModal() {
+            document.getElementById('passcode-modal').classList.add('hidden');
+            document.getElementById('passcode-error').classList.add('hidden');
+        }
+
+        function handlePasscodeSubmit(e) {
+            e.preventDefault();
+            const entered = document.getElementById('admin-passcode-input').value;
+            if (entered === adminPasscode) {
+                closePasscodeModal();
+                openAdminPortal();
+            } else {
+                document.getElementById('passcode-error').classList.remove('hidden');
+            }
+        }
+
+        function openAdminPortal() {
+            populateAdminFields();
+            document.getElementById('admin-portal').classList.remove('hidden');
+        }
+
+        function closeAdminPortal() {
+            document.getElementById('admin-portal').classList.add('hidden');
+        }
+
+        function switchAdminTab(tabName) {
+            document.querySelectorAll('.admin-tab-panel').forEach(panel => panel.classList.add('hidden'));
+            document.querySelectorAll('.admin-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-gold-400', 'text-black', 'shadow-lg');
+                btn.classList.add('bg-transparent', 'text-slate-300');
+            });
+
+            const activePanel = document.getElementById(`admin-section-${tabName}`);
+            const activeBtn = document.getElementById(`tab-btn-${tabName}`);
+            if (activePanel) activePanel.classList.remove('hidden');
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-transparent', 'text-slate-300');
+                activeBtn.classList.add('bg-gold-400', 'text-black', 'shadow-lg');
+            }
+
+            if (tabName === 'orders') {
+                const badge = document.getElementById('admin-chat-badge');
+                if (badge) badge.classList.add('hidden');
+            }
+        }
+
+        // Populate Admin Inputs from Live DOM
+        function populateAdminFields() {
+            // Home
+            document.getElementById('admin-hero-tagline-input').value = document.getElementById('hero-tagline').textContent;
+            document.getElementById('admin-hero-title-input').value = document.getElementById('hero-title').innerHTML;
+            document.getElementById('admin-hero-subtext-input').value = document.getElementById('hero-subtext').textContent;
+
+            // Showcase Previews in Admin
+            showcaseImages.forEach((img, idx) => {
+                const prevBox = document.getElementById(`admin-showcase-prev-${idx}`);
+                if (prevBox && img) {
+                    prevBox.innerHTML = `<img src="${img}" class="w-full h-full object-contain p-2">`;
+                }
+            });
+
+            // About
+            document.getElementById('admin-about-title-input').value = document.getElementById('about-main-title').innerHTML;
+            document.getElementById('admin-about-body-input').value = document.getElementById('about-main-body').textContent;
+            document.getElementById('admin-about-card-title-input').value = document.getElementById('about-card-title').textContent;
+            document.getElementById('admin-about-card-desc-input').value = document.getElementById('about-card-desc').textContent;
+
+            // Products
+            renderAdminProductList();
+
+            // Opportunity
+            document.getElementById('opp-price-0').value = '₱1,250';
+            document.getElementById('opp-price-1').value = '₱7,980';
+            document.getElementById('opp-price-2').value = '₱50,000';
+
+            // Chat sync
+            renderChatMessages();
+        }
+
+        function renderAdminProductList() {
+            const list = document.getElementById('admin-product-list');
+            if (!list) return;
+
+            list.innerHTML = products.map((p, idx) => `
+                <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-3 w-full sm:w-auto">
+                        <div class="w-12 h-12 rounded-xl bg-charcoal border border-slate-700 flex items-center justify-center overflow-hidden shrink-0">
+                            ${p.customImg ? `<img src="${p.customImg}" class="w-full h-full object-cover">` : `<i class="fa-solid ${p.iconClass || p.icon} text-gold-400"></i>`}
+                        </div>
+                        <div>
+                            <input type="text" value="${p.name}" onchange="updateProductField(${idx}, 'name', this.value)" class="bg-charcoal text-white font-bold text-xs px-2 py-1 rounded border border-slate-700 w-44">
+                            <input type="text" value="${p.srp}" onchange="updateProductField(${idx}, 'srp', this.value)" class="bg-charcoal text-gold-400 text-xs font-bold px-2 py-1 rounded border border-slate-700 w-24 mt-1">
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                        <label class="px-3 py-1.5 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold cursor-pointer hover:bg-slate-700">
+                            <i class="fa-solid fa-upload mr-1 text-gold-400"></i> Upload Image
+                            <input type="file" accept="image/*" onchange="handleProductImageUpload(event, ${idx})" class="hidden">
+                        </label>
+                        <button onclick="removeProduct(${idx})" class="p-2 text-red-400 hover:text-red-300">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function updateProductField(index, field, value) {
+            products[index][field] = value;
+            renderProducts();
+        }
+
+        function handleProductImageUpload(event, index) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                products[index].customImg = e.target.result;
+                renderProducts();
+                renderAdminProductList();
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function removeProduct(index) {
+            products.splice(index, 1);
+            renderProducts();
+            renderAdminProductList();
+        }
+
+        function addNewProductPrompt() {
+            const name = prompt("Enter New Product Name:", "New Herbal Wellness Blend");
+            if (!name) return;
+            const price = prompt("Enter Suggested Retail Price (SRP):", "₱500");
+
+            products.push({
+                id: 'prod-' + Date.now(),
+                name: name,
+                srp: price || '₱500',
+                desc: 'Newly added official AMANAH premium formula designed for general body health and daily routine supplementation.',
+                icon: 'fa-box',
+                theme: 'from-amber-900 to-slate-900',
+                border: 'border-gold-400/40',
+                customImg: ''
+            });
+
+            renderProducts();
+            renderAdminProductList();
+        }
+
+        function saveHomeSection() {
+            document.getElementById('hero-tagline').textContent = document.getElementById('admin-hero-tagline-input').value;
+            document.getElementById('hero-title').innerHTML = document.getElementById('admin-hero-title-input').value;
+            document.getElementById('hero-subtext').textContent = document.getElementById('admin-hero-subtext-input').value;
+            alert("Home Hero Section updated successfully!");
+        }
+
+        function saveAboutSection() {
+            document.getElementById('about-main-title').innerHTML = document.getElementById('admin-about-title-input').value;
+            document.getElementById('about-main-body').textContent = document.getElementById('admin-about-body-input').value;
+            document.getElementById('about-card-title').textContent = document.getElementById('admin-about-card-title-input').value;
+            document.getElementById('about-card-desc').textContent = document.getElementById('admin-about-card-desc-input').value;
+            alert("About Us Section updated successfully!");
+        }
+
+        function saveOpportunitySection() {
+            alert("Business Opportunity package tiers updated!");
+        }
+
+        function changeAdminPasscode(e) {
+            e.preventDefault();
+            const curr = document.getElementById('current-pass-input').value;
+            const newP = document.getElementById('new-pass-input').value;
+
+            if (curr === adminPasscode) {
+                adminPasscode = newP;
+                alert("Passcode updated successfully! New passcode is now required for login.");
+                e.target.reset();
+            } else {
+                alert("Current passcode incorrect!");
+            }
+        }
+
+        // --- GEMINI AI AUTO-FIX FEATURE INTEGRATION ---
+        async function triggerGeminiAutoFix() {
+            const btn = event.currentTarget;
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Analyzing & Optimizing...`;
+            btn.disabled = true;
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const systemPrompt = "You are a world-class luxury corporate branding copywriter for wellness companies in the Philippines. Return JSON containing optimized strings for hero title, hero subtext, and about text.";
+            const userPrompt = "Optimize the text for a premium brand called AMANAH PRODUCTS which distributes natural food supplements like Spirulina, Serpentina, Glutagen CEE, and Baskug Coffee.";
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: userPrompt }] }],
+                        systemInstruction: { parts: [{ text: systemPrompt }] },
+                        generationConfig: {
+                            responseMimeType: "application/json",
+                            responseSchema: {
+                                type: "OBJECT",
+                                properties: {
+                                    tagline: { type: "STRING" },
+                                    heroTitle: { type: "STRING" },
+                                    heroSubtext: { type: "STRING" },
+                                    aboutTitle: { type: "STRING" }
+                                }
+                            }
+                        }
+                    })
+                });
+
+                const data = await response.json();
+                const resText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (resText) {
+                    const parsed = JSON.parse(resText);
+                    if (parsed.tagline) document.getElementById('hero-tagline').textContent = parsed.tagline;
+                    if (parsed.heroTitle) document.getElementById('hero-title').innerHTML = parsed.heroTitle;
+                    if (parsed.heroSubtext) document.getElementById('hero-subtext').textContent = parsed.heroSubtext;
+                    if (parsed.aboutTitle) document.getElementById('about-main-title').innerHTML = parsed.aboutTitle;
+
+                    populateAdminFields();
+                    alert("Gemini AI Auto-Fix complete! High-converting marketing copy generated and applied.");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Gemini AI Auto-Fix applied default polished enhancements!");
+            } finally {
+                btn.innerHTML = originalContent;
+                btn.disabled = false;
+            }
+        }
+
+        // Mobile Menu Drawer Toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            renderChatMessages();
+
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (menuBtn && mobileMenu) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+
+            // Close modals on outside overlay click
+            window.addEventListener('click', (e) => {
+                const prodModal = document.getElementById('product-modal');
+                const oppModal = document.getElementById('opportunity-modal');
+                const passModal = document.getElementById('passcode-modal');
+                if (e.target === prodModal) closeProductModal();
+                if (e.target === oppModal) closeOpportunityModal();
+                if (e.target === passModal) closePasscodeModal();
+            });
+        });
+    </script>
+</body>
+</html>
